@@ -1,0 +1,84 @@
+:root {
+    --azul-noche: #00111F;
+    --gris-claro: #F1F5F9;
+    --gris-medio: #CBD5E1;
+    --pizarra: #334155;
+    --ambar: #FDE68A;
+    --blanco: #FFFFFF;
+    --gris-panel: #E2E8F0;
+    --gris-deco: #94A3B8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 200px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+header nav ul li a.active {
+    border-bottom-color: var(--blanco);
+}
+
+header nav ul li.contacto{
+    padding: 13px 22px;
+    border: 2px solid #F1F5F9;
+    border-radius: 999px;
+    font-size: 16px;
+    transition: background-color, 0,2;
+}
+
+header nav ul li.contacto:hover{
+    background-color: var(--pizarra)
+}
+
+header nav ul li.contacto a.active {
+    border-bottom-color: transparent;
+}

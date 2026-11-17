@@ -21,11 +21,14 @@ html{
 }
 
 body{
+    background-image: url(../img/fondo-clarito.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     line-height: 1.6;
 }
 
 /* HEADER */
-
 header {
     background-color: var(--azul-noche);
     color: var(--blanco);
@@ -50,11 +53,11 @@ header nav ul {
     align-items: center;
 }
 
-header nav ul li {
+header nav ul li{
     margin: 0 10px;
 }
 
-header nav ul li a {
+header nav ul li a{
     text-decoration: none;
     color: var(--blanco);
     font-weight: 500;
@@ -63,22 +66,191 @@ header nav ul li a {
     transition: border-color 0.2s ease;
 }
 
+header nav li a:hover{
+    border-bottom: 3px solid var(--blanco);
+}
+
 header nav ul li a.active {
     border-bottom-color: var(--blanco);
 }
 
-header nav ul li.contacto{
-    padding: 13px 22px;
-    border: 2px solid #F1F5F9;
-    border-radius: 999px;
+header nav ul li a.contacto {
+    padding: 12px 24px;
+    border: 3px solid var(--blanco);
+    border-radius: 50px;
     font-size: 16px;
     transition: background-color, 0,2;
 }
 
-header nav ul li.contacto:hover{
+header nav ul li a.contacto:hover{
     background-color: var(--pizarra)
 }
 
-header nav ul li.contacto a.active {
-    border-bottom-color: transparent;
+/* FORMULARIO */
+.formulario{
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: var(--blanco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--gris-deco);
+}
+
+fieldset{
+    border: none;
+    margin-bottom: 10px;
+}
+
+legend{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--azul-noche);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--gris-deco);
+    width: 100%;
+}
+
+form .fila{
+    display: flex;
+    gap: 20px
+}
+
+form .fila .campo{
+    flex: 1;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo label{
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.campoNormal{
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--gris-deco);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fafafa;
+}
+
+textarea{
+    resize: vertical;
+}
+
+.opciones{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.opcion{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid var(--gris-deco);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+fieldset label.opcio-legal{
+    border: none;
+}
+
+.opcion:hover{
+    border-color: var(--azul-noche);
+}
+
+input[type="color"]{
+    width: 70px;
+    height: 45px;
+    border: 1px solid var(--gris-deco);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+input[type="file"]{
+    padding: 10px;
+    border: 2px dashed var(--gris-deco);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botones{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.botones button{
+    border: 1px solid var(--azul-noche);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--blanco);
+    background-color: var(--azul-noche);
+}
+
+.botones button:hover{
+    background-color: var(--pizarra);
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+footer img{
+    width: 200px;
+}
+
+footer div{
+    text-align: center
+}
+footer nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer nav a{
+    transition: color 0.2s;   
+}
+
+footer nav a:hover{
+    color: var(--gris-deco);
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul img{
+    width: 50px;
+    margin: 0 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--blanco);
 }

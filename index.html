@@ -17,17 +17,20 @@
                     <li><a href="#">Empresas</a></li>
                     <li><a href="#">Sostenibilidad</a></li>
                     <li><a href="#">Ofertas de trabajo</a></li>
-                    <li class="contacto"><a href="Contacto/index.html">Contacto</a></li>
+                    <li><a href="Contacto/index.html" class="contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="banner">
-        <h1>¿Qué ofrecemos?</h1>
-        <p>En el Vivero de Empresas del Centro San Luis ofrecemos un espacio de trabajo moderno, equipado y
-            preparado para ayudar a nuevas empresas a desarrollar sus proyectos. Nuestro objetivo es facilitar sus
-            primeros pasos, proporcionando instalaciones, recursos tecnológicos y servicios informáticos que les
-            permitan trabajar de forma segura, eficiente y profesional.</p>
+        <div class="banner-texto">
+            <h1>¿Qué ofrecemos?</h1>
+            <p>En el Vivero de Empresas del Centro San Luis ofrecemos un espacio de trabajo moderno, equipado y
+                preparado para ayudar a nuevas empresas a desarrollar sus proyectos. Nuestro objetivo es facilitar sus
+                primeros pasos, proporcionando instalaciones, recursos tecnológicos y servicios informáticos que les
+                permitan trabajar de forma segura, eficiente y profesional.</p>
+        </div>
+
     </div>
     <main>
         <article>
@@ -38,12 +41,12 @@
                         similique et rerum repudiandae saepe animi error, minus voluptatum perspiciatis veritatis enim
                         ipsam aliquam sapiente ab?</p>
                     <ul>
-                        <li><a href="#detalles" class="detalles"><b><span>Ver detalle</span> ↓</b></a></li>
+                        <li><a href="#detalles" class="detalles"><b><span>Ver detalles</span> ↓</b></a></li>
                     </ul>
                 </div>
                 <label class="zoom-contenedor">
                     <input type="checkbox">
-                <img src="img/Packet Tracer.png" alt="Imagen de infraestructura de red">
+                    <img src="img/Packet Tracer.png" alt="Imagen de infraestructura de red">
                 </label>
             </section>
 
@@ -55,7 +58,7 @@
                         eius voluptates rem.</p>
                     <img src="#" alt="Imagen de equipamiento y almacenamiento">
                     <ul>
-                        <li><a href="#detalles" class="detalles"><b><span>Ver detalle</span> ↓</b></a></li>
+                        <li><a href="#detalles" class="detalles"><b><span>Ver detalles</span> ↓</b></a></li>
                     </ul>
                 </div>
             </section>
@@ -63,12 +66,12 @@
             <section class="servicios">
                 <div>
                     <h2>Servicios en red</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ratione voluptates.
-                        Nobis eveniet veritatis deleniti, voluptate temporibus animi rerum saepe eaque vel amet fuga
-                        accusantium velit earum quis, maiores minima.</p>
-                    <img src="#" alt="Imagen de equipamiento y almacenamiento">
+                    <p>Instalación y configuración de servicios de red en <b>Ubuntu</b> (DHCP para IPs, XRDP para
+                        escritorio remoto y FTP para archivos), incluyendo pruebas de funcionamiento y solución de
+                        incidencias.</p>
+                    <img src="img/UbuntuLogo.png" alt="Imagen de servicios en red">
                     <ul>
-                        <li><a href="#detalles" class="detalles"><b><span>Ver detalle</span> ↓</b></a></li>
+                        <li><a href="#detalles" class="detalles"><b><span>Ver detalles</span> ↓</b></a></li>
                     </ul>
                 </div>
             </section>
@@ -113,7 +116,7 @@
                         consequatur ipsum eligendi ipsa nesciunt. Ipsum quidem itaque quod similique unde voluptatum
                         dolore nesciunt, recusandae doloremque!</p>
                     <ul>
-                        <li><a href="#detalles" class="detalles"><b><span>Ver detalle</span> ↓</b></a></li>
+                        <li><a href="#detalles" class="detalles"><b><span>Ver detalles</span> ↓</b></a></li>
                     </ul>
                 </div>
                 <img src="#" alt="Imagen de despliegue en AWS">
@@ -149,14 +152,15 @@
                     <li>
                         <div>
                             <b>Servicios en red</b>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores est impedit iure
-                                ducimus, animi, consequuntur sint sed molestias veritatis recusandae non dolores
-                                ratione
-                                mollitia. Eveniet molestias sunt consequuntur? Minima, praesentium.</p>
+                            <p>En esta práctica hemos instalado y configurado tres servicios de red en un servidor
+                                Ubuntu: DHCP, para asignar direcciones IP automáticamente; XRDP, para acceder al
+                                servidor de forma remota mediante escritorio gráfico; y FTP, para compartir y gestionar
+                                archivos entre usuarios de forma segura. También hemos realizado pruebas de
+                                funcionamiento y solucionado las incidencias encontradas.</p>
                             <p>PDF</p>
                         </div>
-                        <a class="ver-documento" href="#">Ver documento</a>
-                        <a class="descargar-pdf" href="#">Descargar PDF</a>
+                        <a class="ver-documento" href="PDFs/P5.pdf" target="_blank">Ver documento</a>
+                        <a class="descargar-pdf" href="PDFs/P5.pdf" download="P5.pdf">Descargar PDF</a>
                     </li>
                     <li>
                         <div>
@@ -208,9 +212,19 @@
     <footer>
         <img src="img/logo-vivero-transparente.png" alt="Logo Vivero">
         <div>
-            <p>Proteccion de datos</p>
+            <p>Copyright ©</p>
             <p>Autor: [Nombre del autor]</p>
         </div>
+        <nav>
+            <strong>Navegación</strong>
+            <ul>
+                <li><a href="#">¿Qué ofrecemos?</a></li>
+                <li><a href="#">Empresas</a></li>
+                <li><a href="#">Sostenibilidad</a></li>
+                <li><a href="#">Ofertas de trabajo</a></li>
+                <li><a href="Contacto/index.html" class="contacto">Contacto</a></li>
+            </ul>
+        </nav>
         <ul>
             <li><a href="#"><img src="img/linkedin.svg" alt="Linkedin"></a></li>
             <li><a href="#"><img src="img/instagram.svg" alt="Instagram"></a></li>

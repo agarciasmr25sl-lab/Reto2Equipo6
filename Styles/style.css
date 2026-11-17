@@ -26,7 +26,6 @@ body{
 }
 
 /* HEADER */
-
 header {
     background-color: var(--azul-noche);
     color: var(--blanco);
@@ -51,11 +50,11 @@ header nav ul {
     align-items: center;
 }
 
-header nav ul li {
+header nav ul li{
     margin: 0 10px;
 }
 
-header nav ul li a {
+header nav ul li a{
     text-decoration: none;
     color: var(--blanco);
     font-weight: 500;
@@ -64,26 +63,25 @@ header nav ul li a {
     transition: border-color 0.2s ease;
 }
 
+header nav li a:hover{
+    border-bottom: 3px solid var(--blanco);
+}
+
 header nav ul li a.active {
     border-bottom-color: var(--blanco);
 }
 
-header nav ul li.contacto {
-    padding: 13px 22px;
-    border: 2px solid var(--blanco);
-    border-radius: 10px;
+header nav ul li a.contacto {
+    padding: 12px 24px;
+    border: 3px solid var(--blanco);
+    border-radius: 50px;
     font-size: 16px;
     transition: background-color, 0,2;
 }
 
-header nav ul li.contacto:hover{
+header nav ul li a.contacto:hover{
     background-color: var(--pizarra)
 }
-
-header nav ul li.contacto a.active {
-    border-bottom-color: transparent;
-}
-
 
 /* BANNER */
 
@@ -97,8 +95,15 @@ header nav ul li.contacto a.active {
     background-repeat: no-repeat;
     width: 100%;
     height: 500px;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
     padding: 50px;
+}
+
+.banner-texto{
+    max-width: 600px;
+    background-color: rgba(0, 17, 31, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .banner h1{
@@ -138,7 +143,7 @@ main article {
 main article section {
     display: flex;
     flex-direction: column;
-    border: 1.9px solid var(--azul-noche);
+    border: 1px solid var(--gris-deco);
     padding: 30px;
     margin: 0;
     border-radius: 10px;
@@ -209,14 +214,12 @@ main article section.red ul {
   transition: transform 0.3s ease;
 }
 
-/* Cuando se hace clic (checkbox marcado), la imagen crece */
 .zoom-contenedor input:checked + img {
-  transform: scale(3); /* Se agranda al doble */
+  transform: scale(2);
   cursor: zoom-out;
   position: relative;
-  z-index: 100; /* Asegura que quede por encima de otros elementos */
+  z-index: 100;
 }
-
 
 /* SECTION EQUIPAMIENTO */
 
@@ -262,9 +265,10 @@ main article section.servicios ul {
 
 main article section.servicios img {
     flex: 2;
-    min-width: 0;
-    height: 220px;
+    width: 60%;
+    align-self: center;
     object-fit: cover;
+    padding-bottom: 10px;
     border-radius: 10px;
 }
 
@@ -364,6 +368,7 @@ main article section#detalles li{
 
 main article section#detalles li div{
     margin-right: 50px;
+    max-width: 1200px;
 }
 
 main article section#detalles a.ver-documento{
@@ -373,6 +378,7 @@ main article section#detalles a.ver-documento{
     padding: 10px 20px;
     margin-right: 25px;
     border-radius: 10px;
+    text-align: center;
     border: 2px solid var(--azul-noche);
     transition: background-color 0.2s, transform 0.2s;
 }   
@@ -383,6 +389,7 @@ main article section#detalles a.descargar-pdf{
     width: 220px;
     padding: 10px 20px;
     border-radius: 10px;
+    text-align: center;
     border: 2px solid var(--azul-noche);
     font-weight: bold;
     transition: background-color 0.2s, transform 0.2s;
@@ -414,14 +421,13 @@ main article section#detalles p{
 }
 
 /* FOOTER */
-
 footer{
     background-color: var(--azul-noche);
     color: var(--blanco);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 40px;
 }
 
 footer img{
@@ -430,6 +436,19 @@ footer img{
 
 footer div{
     text-align: center
+}
+footer nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer nav a{
+    transition: color 0.2s;   
+}
+
+footer nav a:hover{
+    color: var(--gris-deco);
 }
 
 footer ul{

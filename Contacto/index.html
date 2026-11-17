@@ -18,11 +18,172 @@
                     <li><a href="#">Empresas</a></li>
                     <li><a href="#">Sostenibilidad</a></li>
                     <li><a href="#">Ofertas de trabajo</a></li>
-                    <li class="contacto"><a href="Contacto/index.html">Contacto</a></li>
+                    <li><a href="Contacto/index.html" class="contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <main>
+        <section id="contacto">
+            <div class="form-container">
+                <form class="formulario" action="#" method="post">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <div class="fila">
+                            <div class="campo">
+                                <label for="nombre">Nombre *</label>
+                                <input class="campoNormal" type="text" name="nombre" id="nombre" placeholder="Tú nombre"
+                                    required>
+                            </div>
+                            <div class="campo">
+                                <label for="apellidos">Apellidos</label>
+                                <input class="campoNormal" type="text" name="apellidos" id="apellidos"
+                                    placeholder="Tus apellidos">
+                            </div>
+                        </div>
+                        <div class="fila">
+                            <div class="campo">
+                                <label for="email">Email *</label>
+                                <input class="campoNormal" type="text" name="email" id="email"
+                                    placeholder="nombre@correo.com" required>
+                            </div>
+                            <div class="campo">
+                                <label for="telefono">Teléfono *</label>
+                                <input class="campoNormal" type="tel" name="telefono" id="telefono"
+                                    placeholder="600 000 000" required>
+                            </div>
+                        </div>
+                        <div class="fila">
+                            <div class="campo">
+                                <label for="nacimiento">Fecha prevista de entrada / Inicio en el vivero</label>
+                                <input class="campoNormal" type="date" name="nacimiento" id="nacimiento">
+                            </div>
+                            <div class="campo">
+                                <label for="socios">Número de socios</label>
+                                <input class="campoNormal" type="number" min="1" max="99" name="socios" id="socios"
+                                    placeholder="4">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="web">Página de empresa</label>
+                            <input class="campoNormal" type="url" name="web" id="web" placeholder="http://empresa.com">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tu consulta</legend>
+                        <div class="campo">
+                            <label for="servicio">Servicio que te interesa</label>
+                            <select class="campoNormal" name="servicio" id="servicio">
+                                <option value="">--- Elige una opción ---</option>
+                                <option value="web">Desarrollo Web</option>
+                                <option value="app">Aplicación móvil</option>
+                                <option value="iot">Proyecto IoT</option>
+                                <option value="formaccion">Formación</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <span class="etiqueta-grupo">Forma de contacto preferida</span>
+                            <div class="opciones">
+                                <label class="opcion"><input type="radio" name="contacto" value="email" checked>
+                                    Email</label>
+                                <label class="opcion"><input type="radio" name="contacto" value="telefono">
+                                    Teléfono</label>
+                                <label class="opcion"><input type="radio" name="contacto" value="whatsapp">
+                                    WhatsApp</label>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <span class="etiqueta-grupo">Tecnologías de interés</span>
+                            <div class="opciones">
+                                <label class="opcion"><input type="checkbox" name="tecnologias" value="html">
+                                    HTML/CSS</label>
+                                <label class="opcion"><input type="checkbox" name="tecnologias" value="iot">
+                                    IoT</label>
+                                <label class="opcion"><input type="checkbox" name="tecnologias" value="vr">
+                                    VR</label>
+                                <label class="opcion"><input type="checkbox" name="tecnologias" value="ia">
+                                    IA</label>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <div class="campo">
+                                <label for="presupuesto">Presupuesto aproximado: hasta 5000 €</label>
+                                <input type="range" name="presupuesto" id="presupuesto" min="500" max="5000" step="500"
+                                    value="2500">
+                            </div>
+                            <div class="campo">
+                                <label for="color">Color corporativo</label>
+                                <input type="color" name="color" id="color" value="#00111F">
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="documento">Adjuntar documento</label>
+                            <input type="file" name="documento" id="documento" accept=".pdf,.doc,.docx">
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">Descripción del proyecto *</label>
+                            <textarea class="campoNormal" name="mensaje" id="mensaje" rows="5"
+                                placeholder="Cuéntanos tu proyecto..." required></textarea>
+                        </div>
+
+                        <label class="opcion opcion-legal">
+                            <input type="checkbox" name="privacidad" id="privacidad" required>
+                            He leido y acepto la politica de privacidad*
+                        </label>
+
+                        <div class="botones">
+                            <button type="reset" class="boton boton-borde">Borrar</button>
+                            <button type="submit" class="boton">Enviar solicitud</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.querySelectorAll('header nav ul li a').forEach(enlace => {
+            enlace.addEventListener('click', function (e) {
+                // 1. Busca si hay algún otro enlace con la clase 'active' y se la quita
+                const activoPrevio = document.querySelector('header nav ul li a.active');
+                if (activoPrevio) {
+                    activoPrevio.classList.remove('active');
+                }
+
+                // 2. Le añade la clase 'active' al enlace que acabas de pulsar
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+
+    <footer>
+        <img src="img/logo-vivero-transparente.png" alt="Logo Vivero">
+        <div>
+            <p>Copyright ©</p>
+            <p>Autor: [Nombre del autor]</p>
+        </div>
+        <nav>
+            <strong>Navegación</strong>
+                <ul>
+                    <li><a href="../index.html">¿Qué ofrecemos?</a></li>
+                    <li><a href="#">Empresas</a></li>
+                    <li><a href="#">Sostenibilidad</a></li>
+                    <li><a href="#">Ofertas de trabajo</a></li>
+                    <li><a href="Contacto/index.html" class="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        <ul>
+            <li><a href="#"><img src="img/linkedin.svg" alt="Linkedin"></a></li>
+            <li><a href="#"><img src="img/instagram.svg" alt="Instagram"></a></li>
+            <li><a href="#"><img src="img/youtube.svg" alt="YouTube"></a></li>
+            <li><a href="#"><img src="img/tiktok.svg" alt="TikTok"></a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>

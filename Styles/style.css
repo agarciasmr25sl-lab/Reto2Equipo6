@@ -126,7 +126,10 @@ header nav ul li a.contacto:hover{
 
 /* MAIN */
 main{
-    background-color: var(--gris-medio);
+    background-image: url(../img/fondo-clarito.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 main article {

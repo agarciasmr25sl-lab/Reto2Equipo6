@@ -95,7 +95,8 @@ article{
 }
 
 article section{
-    min-width: 40%;
+    flex: 1;
+    min-width: 0;
     background-color: var(--blanco);
     margin: 20px;
     border: 1px solid var(--gris-deco);
@@ -110,6 +111,7 @@ h2{
 
 /* SECTION1 */
 table{
+    width: 100%;
     border-radius: 10px;
     border-spacing: 0;
     overflow: hidden;
@@ -138,7 +140,11 @@ tbody tr:hover{
 
 /* SECTION2 */
 article section img{
-    max-width: 500px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 /* BOTONES */

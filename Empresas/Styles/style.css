@@ -87,8 +87,92 @@ header nav ul li a.contacto:hover{
     background-color: var(--pizarra)
 }
 
+/* MAIN */
+section.junto{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
 
+section.junto img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
 
+section.separado{
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+article.tarjeta{
+    flex: 1;
+    min-width: 0;
+    background-color: var(--blanco);
+    margin: 20px;
+    border: 1px solid var(--gris-deco);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.tarjeta ul{
+    list-style: none;
+    text-align: end;
+    margin-top: auto;
+}
+
+.tarjeta ul li a{
+    text-decoration: none;
+    color: var(--azul-noche);
+}
+
+.tarjeta ul li a span{
+    text-decoration: none;
+    color: var(--azul-noche);
+    border-bottom: 1px solid;
+}
+
+/* TABLE */
+table{
+    width: 100%;
+    border-radius: 10px;
+    border-spacing: 0;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+th{
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+    padding: 10px;
+}
+
+td{
+    padding: 10px;
+    border-bottom: 1px solid var(--gris-deco);
+}
+
+td a{
+    text-decoration: none;
+    color: black;
+}
+
+td.num{
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--gris-claro);
+}
+
+tbody tr:hover{
+    background-color: var(--gris-medio);
+}
 
 /* FOOTER */
 footer{

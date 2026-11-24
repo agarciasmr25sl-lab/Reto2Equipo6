@@ -87,6 +87,105 @@ header nav ul li a.contacto:hover{
     background-color: var(--pizarra)
 }
 
+/* MAIN */
+
+main div.contenido{
+    background-color: var(--blanco);
+    align-items: center;
+    gap: 40px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    margin: 30px 30px;
+    border: 1px solid var(--gris-deco);
+}
+
+main div.resumen{
+    margin-bottom: 10px;
+}
+
+main div.resumen p{
+    margin-top: 10px;
+    text-align: left;
+}
+
+main nav.pdf ul li{
+    display: flex;
+    gap: 12px;
+}
+
+main nav.pdf li a{
+    text-decoration: none;
+    background-color: var(--azul-noche);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--gris-deco);
+}
+
+main nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+   
+}
+
+main nav ul li a{
+  text-decoration: none;
+  
+}
+
+main section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 30px;
+}
+
+main section article{
+    background-color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gris-deco);
+    padding: 30px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+main section article a{
+    text-decoration: none;
+    color: #00111F;
+    border-bottom: 1px solid;
+}
+
+main section article p{
+    margin-bottom: 15px;
+}
+
+main section.videos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+    margin: 30px;
+}
+
+main section.videos article{
+    align-items: center;
+}
+
+main section.videos article h2{
+    border-bottom: 1px solid var(--gris-deco);
+    margin-bottom: 25px;
+}
+
+main section.videos article a{
+    align-self: center;
+    border-bottom: none;
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+    padding: 10px 18px;
+    border-radius: 10px;
+}
+
 
 
 

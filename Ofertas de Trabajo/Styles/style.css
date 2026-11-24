@@ -126,11 +126,15 @@ main nav ul{
     display: flex;
     list-style: none;
     gap: 20px;
-   
 }
 
 main nav ul li a{
   text-decoration: none;
+}
+
+main nav ul li a:hover{
+    background-color: var(--pizarra);
+    transform: translateY(-5px);
   
 }
 
@@ -155,6 +159,12 @@ main section article a{
     text-decoration: none;
     color: #00111F;
     border-bottom: 1px solid;
+}
+
+main section article b:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    transform-origin: left center;
 }
 
 main section article p{
@@ -184,6 +194,11 @@ main section.videos article a{
     color: var(--blanco);
     padding: 10px 18px;
     border-radius: 10px;
+}
+
+main section.videos article a:hover{
+    background-color: var(--pizarra);
+    transform: translateY(-5px);
 }
 
 

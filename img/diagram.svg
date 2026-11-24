@@ -1,0 +1,89 @@
+<svg class="dark " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1245.5 491" width="1245.5" height="491" id="m67ebb5__root" data-diagram-type="ascii">
+  <style data-mercat-style="universal">.mercat text{font-family:'Google Sans',Roboto,Arial,sans-serif;fill:var(--m-text);dominant-baseline:central}.mercat .m-node .m-shape{fill:var(--m-node-fill);stroke:var(--m-node-stroke);stroke-width:1.5px}.mercat .m-edge .m-path{fill:none;stroke:var(--m-line);stroke-width:1.5px}.mercat .m-group .m-shape{fill:var(--m-group-fill);stroke:var(--m-group-stroke);stroke-width:1px}.mercat .m-group .m-label{fill:var(--m-group-text)}.mercat .m-note .m-shape{fill:var(--m-note-fill);stroke:var(--m-note-stroke);stroke-width:1px}.mercat .m-note .m-label{fill:var(--m-note-text)}.mercat .t-heading{font-size:14px;font-weight:600}.mercat .t-label{font-size:13px;font-weight:500}</style>
+  <style data-mercat-style="theme-light">#m67ebb5__root{--m-text:#1f1f1f;--m-line:#545454;--m-node-fill:#f8f9fa;--m-node-stroke:#747775;--m-group-fill:#f8f9fa;--m-group-stroke:#747775;--m-group-text:#1f1f1f;--m-note-fill:#fef9e7;--m-note-stroke:#f39c12;--m-note-text:#1f1f1f}</style>
+  <style data-mercat-style="theme-dark">#m67ebb5__root.dark{--m-text:#e3e3e3;--m-line:#bfbfbf;--m-node-fill:#2d2e30;--m-node-stroke:#8e918f;--m-group-fill:#2d2e30;--m-group-stroke:#8e918f;--m-group-text:#e3e3e3;--m-note-fill:#69550d;--m-note-stroke:#f39c12;--m-note-text:#e3e3e3}</style>
+  <style data-mercat-style="type">#m67ebb5__root .outer-box{fill:var(--m-text);stroke:var(--m-node-stroke);stroke-width:1.75px;fill-opacity:0.06}#m67ebb5__root .header-text{fill:var(--m-text);font-size:14px;font-weight:600;white-space:pre}#m67ebb5__root .arrow-line,#m67ebb5__root .bus-line{fill:none;stroke:var(--m-line);stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}#m67ebb5__root .annotation-text{fill:var(--m-text);font-size:12px;font-weight:500;white-space:pre}</style>
+  <style data-mercat-style="diagram">#m67ebb5__root text{font-family:Google Sans Mono, Roboto Mono, monospace}</style>
+  <g class="mercat mercat-ascii">
+    <defs>
+      <marker id="m67ebb5__mk-arrow" refX="9.45" refY="3.4" markerWidth="10.8" markerHeight="6.8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+        <path d="M 0 0 L 10.8 3.4 L 0 6.8 Z" class="m-marker" fill="var(--m-line)" stroke="none"/>
+      </marker>
+    </defs>
+    <g class="m-node shape outer cluster" id="m67ebb5__node__n0" data-role="step">
+      <rect x="567.5" y="15" width="280.5" height="66" class="m-shape outer-box"/>
+      <text x="703.5" y="48" class="m-label t-heading header-text" text-anchor="middle">DNS (Route 53 / Registrador)</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m67ebb5__node__n1" data-role="step">
+      <rect x="15" y="81" width="246.5" height="66" class="m-shape outer-box"/>
+      <text x="134" y="114" class="m-label t-heading header-text" text-anchor="middle">USUARIO / NAVEGADOR</text>
+    </g>
+    <g class="m-group shape outer cluster" id="m67ebb5__group__g2" data-role="group">
+      <rect x="346.5" y="147" width="884" height="286" class="m-shape outer-box"/>
+      <text x="899" y="202" class="m-label t-heading header-text" text-anchor="middle">──► Filtra tráfico (solo 80 / 443)</text>
+      <text x="784.25" y="169" class="m-label t-heading header-text" text-anchor="middle">NUBE AWS (VPC)          ▼</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m67ebb5__node__n3" data-role="step">
+      <rect x="499.5" y="191" width="246.5" height="66" class="m-shape outer-box"/>
+      <text x="618.5" y="224" class="m-label t-heading header-text" text-anchor="middle">Firewall / Security Group</text>
+    </g>
+    <g class="m-group shape outer cluster" id="m67ebb5__group__g4" data-role="group">
+      <rect x="380.5" y="279" width="816" height="132" class="m-shape outer-box"/>
+      <text x="920.25" y="334" class="m-label t-heading header-text" text-anchor="middle">──► Gestiona SSL y sirve los archivos de tu web</text>
+      <text x="860.75" y="356" class="m-label t-heading header-text" text-anchor="middle">(HTML, CSS, JS, imágenes)</text>
+      <text x="784.25" y="301" class="m-label t-heading header-text" text-anchor="middle">TU SERVIDOR (EC2)         ▼</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m67ebb5__node__n5" data-role="step">
+      <rect x="533.5" y="323" width="178.5" height="66" class="m-shape outer-box"/>
+      <text x="618.5" y="356" class="m-label t-heading header-text" text-anchor="middle">Nginx / Apache</text>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__pt__a0__0" data-role="connector">
+      <line x1="316.75" y1="48" x2="333.75" y2="48" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__a0__n0__0" data-role="connector">
+      <line x1="508" y1="48" x2="566.15" y2="48" class="m-path arrow-line" marker-end="url(#m67ebb5__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__n0__a1__0" data-role="connector">
+      <line x1="848" y1="48" x2="880.65" y2="48" class="m-path arrow-line" marker-end="url(#m67ebb5__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__n1__a2__0" data-role="connector">
+      <line x1="261.5" y1="114" x2="333.75" y2="114" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__a2__pt__0" data-role="connector">
+      <line x1="554.75" y1="114" x2="571.75" y2="114" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__pt__a3__0" data-role="connector">
+      <line x1="138.25" y1="466" x2="333.75" y2="466" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__pt__a3__1" data-role="connector">
+      <line x1="622.75" y1="466" x2="577.35" y2="466" class="m-path arrow-line" marker-end="url(#m67ebb5__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__pt__n1__0" data-role="connector">
+      <line x1="138.25" y1="466" x2="138.25" y2="148.35" class="m-path arrow-line" marker-end="url(#m67ebb5__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__pt__pt__0" data-role="connector">
+      <line x1="316.75" y1="48" x2="316.75" y2="466" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__pt__n3__0" data-role="connector">
+      <line x1="571.75" y1="114" x2="571.75" y2="147" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__n3__n5__0" data-role="connector">
+      <line x1="622.75" y1="257" x2="622.75" y2="279" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m67ebb5__edge__n5__pt__0" data-role="connector">
+      <line x1="622.75" y1="433" x2="622.75" y2="466" class="m-path bus-line"/>
+    </g>
+    <g class="m-node m-note" id="m67ebb5__note__a0" data-role="annotation">
+      <text x="346.5" y="48" class="m-label t-label annotation-text" text-anchor="start">1. Escribe dominio</text>
+    </g>
+    <g class="m-node m-note" id="m67ebb5__note__a1" data-role="annotation">
+      <text x="890.5" y="48" class="m-label t-label annotation-text" text-anchor="start">Traduce a Elastic IP</text>
+    </g>
+    <g class="m-node m-note" id="m67ebb5__note__a2" data-role="annotation">
+      <text x="346.5" y="114" class="m-label t-label annotation-text" text-anchor="start">2. Petición HTTPS (443)</text>
+    </g>
+    <g class="m-node m-note" id="m67ebb5__note__a3" data-role="annotation">
+      <text x="346.5" y="466" class="m-label t-label annotation-text" text-anchor="start">3. Respuesta (Web cargada)</text>
+    </g>
+  </g>
+</svg>
